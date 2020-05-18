@@ -1,79 +1,52 @@
 <template>
-  <div class="container-fluid p-0 m-0">
-    <div class="row p-0 m-0 justify-content-around align-items-center">
-      <div class="col-12 text-center navbar-logo">
-        <div class="fixed text-center pt-1">
-          Covid-19
-          <img src="../assets/covid-logo.png" alt />
-          Update
-        </div>
+  <div class="container-fluid hero-page p-0 m-0">
+    <Navbar />
+    <div class="hero-page-content">
+      <div>
+        <h2 class="text-center pt-5 m-0 mb-4 mt-5">The Global Update</h2>
+        <Global></Global>
       </div>
-      <div class="col-12 hero-page">
-        <div class="container text-center hero-page-content">
-          <div class="row hero-page-content-details">
-            <div class="col-lg-4 col-sm-12 col-md-4">
-              <p>Total Case</p>
-            </div>
-            <div class="col-lg-4 col-sm-12 col-md-4">
-              <p>Recovered Case</p>
-            </div>
-            <div class="col-lg-4 col-sm-12 col-md-4">
-              <p>Death Case</p>
-            </div>
-          </div>
-        </div>
+      <div>
+        <h2 class="text-center pt-3 m-0 mb-4 mt-2">Per Conutry Update</h2>
+        <Summary class="mb-5"></Summary>
+      </div>
+      <div>
+        <CovidIfo />
+      </div>
+      <div class="mt-2">
+        <Footer />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-
+import Global from "./Global";
+import Summary from "./Summary";
+import CovidIfo from "../components/CovidInfo";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 export default {
   name: "Home",
-  // data() {
-  //   total: [];
-  // },
-  // methods: {},
-  components: {}
+  components: {
+    Global,
+    Summary,
+    CovidIfo,
+    Navbar,
+    Footer
+  }
 };
 </script>
 <style lang="scss" scoped>
-.navbar-logo {
-  background: rgb(255, 255, 255);
-  height: 9vh;
-  text-align: center;
-  font-size: 20px;
-  box-shadow: 0 4px 0 rgb(138, 138, 138);
-  img {
-    width: 4%;
-    text-align: center;
+.hero-page {
+  width: 100%;
+  min-height: 79vh;
+  .hero-page-content {
+    width: 100%;
+    min-height: 99.8vh;
   }
 }
-.hero-page {
-  background: linear-gradient(rgb(203, 59, 57), rgb(203, 59, 57));
-  // background-position: 50% 50%;
-  // background-repeat: no-repeat;
-  // background-size: 345px 412px;
-  width: 100%;
-  height: 91.1vh;
-  // background-attachment: fixed;
-  // color: #fff;
-  .hero-page-content {
-    background: url("../assets/map.png");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: 345px 412px;
-    width: 100%;
-    height: 91.1vh;
-    background-attachment: fixed;
-    color: #fff;
-    .hero-page-content-details {
-      height: 91.1vh;
-      justify-content: space-around;
-      align-items: center;
-    }
-  }
+h2 {
+  color: #183577;
 }
 </style>
