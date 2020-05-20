@@ -4,15 +4,15 @@
       <div class="card-body">
         <div class="row align-items-center global" v-if="Global">
           <div class="col-lg-4 mt-2 text-center">
-            <h2>{{Global.TotalConfirmed}}</h2>
+            <h2>{{formatNumberWithCommas(Global.TotalConfirmed)}}</h2>
             <p class="card-text">Confirmed</p>
           </div>
           <div class="col-lg-4 mt-2 text-center">
-            <h1>{{Global.TotalRecovered}}</h1>
+            <h1>{{formatNumberWithCommas(Global.TotalRecovered)}}</h1>
             <p class="card-text">Recovered</p>
           </div>
           <div class="col-lg-4 mt-2 text-center">
-            <h2>{{Global.TotalDeaths}}</h2>
+            <h2>{{formatNumberWithCommas(Global.TotalDeaths)}}</h2>
             <p class="card-text">Deaths</p>
           </div>
         </div>
@@ -43,24 +43,27 @@ export default {
       } catch (error) {
         console.error(error);
       }
+    },
+    formatNumberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-    // formatNumber() {
-    //   const death = data.Global.TotalDeaths;
-    //   return death.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
-    // }
   }
 };
 </script>
 <style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 h2 {
   color: rgb(58, 143, 255);
   font-size: 30px;
-  font-weight: bolder;
+  font-family: "Bebas Neue", cursive;
+}
+.card-text {
+  font-family: "Bebas Neue", cursive;
 }
 h1 {
   font-size: 80px;
   color: rgb(58, 143, 255);
-  font-weight: bolder;
+  font-family: "Bebas Neue", cursive;
 }
 p {
   color: #183577;

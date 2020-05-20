@@ -13,10 +13,11 @@ export default {
 };
 </script>
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
 #app {
-  font-family: "Oswald", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   background: url("./assets/map.png");
@@ -25,5 +26,8 @@ export default {
   background-size: 30%;
   min-height: 99.5vh;
   background-attachment: fixed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
 }
 </style>

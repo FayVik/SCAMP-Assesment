@@ -4,20 +4,15 @@
       <div class="card-body">
         <div class="overflow-auto summary">
           <b-table
-            id="my-table"
             :items="items"
             :per-page="perPage"
+            :fields="fields"
             :current-page="currentPage"
             small
           ></b-table>
 
           <hr />
-          <b-pagination
-            v-model="currentPage"
-            :total-rows="rows"
-            :per-page="perPage"
-            aria-controls="my-table"
-          ></b-pagination>
+          <b-pagination v-model="currentPage" :total-rows="rows" :per-page="perPage"></b-pagination>
         </div>
       </div>
     </div>
@@ -31,6 +26,15 @@ export default {
     return {
       currentPage: 1,
       perPage: 6,
+      fields: [
+        "Country",
+        "NewConfirmed",
+        "NewConfirmed",
+        "NewDeaths",
+        "TotalDeaths",
+        "NewRecovered",
+        "TotalRecovered"
+      ],
       items: []
     };
   },
@@ -59,9 +63,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 .card {
   background: rgb(58, 143, 255);
   color: #ffffff;
+  font-size: 18px;
   .summary {
     min-height: 40vh;
     .b-table {

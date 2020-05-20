@@ -38,6 +38,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 .hero-page {
   width: 100%;
   min-height: 79vh;
@@ -48,5 +49,8 @@ export default {
 }
 h2 {
   color: #183577;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
 }
 </style>
