@@ -71,7 +71,8 @@ export default {
   .summary {
     min-height: 40vh;
     .b-table {
-      color: #183577;
+      // color: #183577;
+      color: #d6d6d6;
       margin-top: 4%;
     }
     .pagination {
