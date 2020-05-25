@@ -3,7 +3,31 @@
     <div class="card pb-3">
       <div class="card-body">
         <div class="overflow-auto summary">
+          <b-col lg="6" class="my-1">
+            <b-form-group
+              label="Filter"
+              label-cols-sm="3"
+              label-align-sm="right"
+              label-size="sm"
+              label-for="filterInput"
+              class="mb-0"
+            >
+              <b-input-group size="sm">
+                <b-form-input
+                  v-model="filter"
+                  type="search"
+                  id="filterInput"
+                  placeholder="Type to Search"
+                ></b-form-input>
+                <b-input-group-append>
+                  <b-button :disabled="!filter" @click="filter = ''">Clear</b-button>
+                </b-input-group-append>
+              </b-input-group>
+            </b-form-group>
+          </b-col>
+
           <b-table
+            :filter="filter"
             :items="items"
             :per-page="perPage"
             :fields="fields"
@@ -24,6 +48,7 @@ export default {
   name: "summary",
   data() {
     return {
+      filter: null,
       currentPage: 1,
       perPage: 6,
       fields: [

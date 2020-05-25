@@ -23,7 +23,7 @@ export default {
       rgba(238, 238, 238, 0.875)
     ),
     url("./assets/map.png");
-  background-position: center;
+  background-position: cover;
   background-repeat: no-repeat;
   background-size: 100%;
   min-height: 99.5vh;
