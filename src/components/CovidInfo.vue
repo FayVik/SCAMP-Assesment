@@ -1,9 +1,9 @@
 <template>
   <div class="container-fluid">
     <div class="container">
-      <h1>What are coronaviruses?</h1>
-      <div class="row">
-        <div class="col-lg-6 col-md-12 col-sm-12 pt-2">
+      <h1 class="covid-heading">What are coronaviruses?</h1>
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-md-12 col-sm-12">
           <p class="covid-text">
             Coronaviruses are a large family of viruses that cause illness ranging
             from the common cold to more severe diseases such as Middle East Respiratory
@@ -11,8 +11,8 @@
             that has not been previously identified in humans and causes COVID19/coronavirus disease.
           </p>
         </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 text-center covid-image pt-3 pb-2">
-          <img src="../assets/covid-logo.png" alt />
+        <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+          <img src="../assets/covid-logo.png" width="300" alt />
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
       <h1 class="text-center mt-5">How to Protect Yourself & Others</h1>
       <div class="row mt-5">
         <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-2 mb-2">
-          <img src="../assets/Hand.png" width="150" alt />
+          <img src="../assets/Hand.png" width="120" alt />
           <p class="mt-3">
             Wash your hands often with soap and water for at least 20 seconds especially
             after you have been in a public place, or after blowing your nose, coughing,
@@ -30,7 +30,7 @@
           </p>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-2 mb-2">
-          <img src="../assets/close.png" width="150" alt />
+          <img src="../assets/close.png" width="120" alt />
           <p class="mt-3">
             Avoid close contact with people who are sick, even inside your home. If possible,
             maintain 6 feet between the person who is sick and other household members.
@@ -38,7 +38,7 @@
           </p>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-2 mb-2">
-          <img src="../assets/cloth-face-cover.png" width="150" alt />
+          <img src="../assets/cloth-face-cover.png" width="120" alt />
           <p class="mt-3">
             Cover your mouth and nose with a cloth
             face cover when around others. In order not to get the sickness and
@@ -46,7 +46,7 @@
           </p>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-2 mb-2">
-          <img src="../assets/cough.png" width="150" alt />
+          <img src="../assets/cough.png" width="120" alt />
           <p class="mt-3">
             If you are in a private setting and do not have on your cloth face covering, remember to always cover your mouth
             and nose with a tissue when you cough or sneeze or use the inside of your elbow.
@@ -54,13 +54,13 @@
           </p>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-2 mb-2">
-          <img src="../assets/touch.png" width="150" alt />
+          <img src="../assets/touch.png" width="120" alt />
           <p
             class="mt-3"
           >Avoid touching your eyes, nose, and mouth with unwashed hands. Viruses that cause colds can enter your body this way and make you sick</p>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 text-center mt-2 mb-2">
-          <img src="../assets/phone.png" width="150" alt />
+          <img src="../assets/phone.png" width="120" alt />
           <p class="mt-3">
             Stay home, most people with COVID-19 have mild illness and can recover at home without medical care. Do not leave your home,
             except to get medical care. Do not visit public areas. Call before you get medical care. Be sure to get care if you have trouble breathing,
@@ -84,11 +84,11 @@ h1 {
   color: #183577;
   font-weight: bolder;
   font-family: "Bebas Neue", cursive;
+  margin-top: 10% !important;
 }
 .covid-text {
-  font-size: 20px;
-  color: #183577;
-  line-height: 7vh;
+  line-height: 2.2;
+  font-size: 16px;
 }
 p {
   color: #183577;
@@ -96,7 +96,7 @@ p {
 }
 .covid-image {
   img {
-    width: 360px;
+    width: 100px;
   }
 }
 </style>

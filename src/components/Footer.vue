@@ -25,13 +25,13 @@ footer {
   background-color: #3a8fff;
   min-height: 10vh;
   width: 100%;
-  color: #183577;
+  color: #ffffff;
   .footer {
     min-height: 10vh;
     width: 100%;
     a {
       text-decoration: none;
-      color: #183577;
+      color: #ffffff;
       padding: 10px;
     }
   }

@@ -14,16 +14,18 @@ export default {
 </script>
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
 #app {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  background: url("./assets/map.png");
+  background: linear-gradient(
+      rgba(238, 238, 238, 0.875),
+      rgba(238, 238, 238, 0.875)
+    ),
+    url("./assets/map.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 30%;
+  background-size: 100%;
   min-height: 99.5vh;
   background-attachment: fixed;
   font-style: normal;

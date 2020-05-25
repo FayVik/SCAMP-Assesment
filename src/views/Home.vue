@@ -7,10 +7,10 @@
         <Global></Global>
       </div>
       <div>
-        <h2 class="text-center pt-3 m-0 mb-4 mt-2">Per Conutry Update</h2>
+        <h2 class="text-center pt-3 m-0 mb-4 mt-2">Per Country Update</h2>
         <Summary class="mb-5"></Summary>
       </div>
-      <div>
+      <div class="mt-5">
         <CovidIfo />
       </div>
       <div class="mt-2">

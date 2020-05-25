@@ -30,19 +30,19 @@ export default {
     };
   },
   mounted() {
-    this.getEmployees();
+    this.getGlobalSta();
   },
   methods: {
-    async getEmployees() {
-      try {
-        const response = await fetch("https://api.covid19api.com/summary");
-        const data = await response.json();
-        setInterval(() => {
+    getGlobalSta() {
+      setInterval(async () => {
+        try {
+          const response = await fetch("https://api.covid19api.com/summary");
+          const data = await response.json();
           this.Global = data.Global;
-        }, 1000);
-      } catch (error) {
-        console.error(error);
-      }
+        } catch (error) {
+          console.error(error);
+        }
+      }, 1000);
     },
     formatNumberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
