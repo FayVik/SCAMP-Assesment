@@ -42,7 +42,7 @@ export default {
         } catch (error) {
           console.error(error);
         }
-      }, 1000);
+      }, 30000);
     },
     formatNumberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

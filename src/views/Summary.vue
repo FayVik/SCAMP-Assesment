@@ -76,7 +76,7 @@ export default {
         } catch (error) {
           console.error(error);
         }
-      }, 1000);
+      }, 30000);
     }
   },
   computed: {
