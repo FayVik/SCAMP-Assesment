@@ -31,18 +31,19 @@ export default {
   },
   mounted() {
     this.getGlobalSta();
+    setInterval(() => {
+      this.getGlobalSta();
+    }, 30000);
   },
   methods: {
-    getGlobalSta() {
-      setInterval(async () => {
-        try {
-          const response = await fetch("https://api.covid19api.com/summary");
-          const data = await response.json();
-          this.Global = data.Global;
-        } catch (error) {
-          console.error(error);
-        }
-      }, 30000);
+    async getGlobalSta() {
+      try {
+        const response = await fetch("https://api.covid19api.com/summary");
+        const data = await response.json();
+        this.Global = data.Global;
+      } catch (error) {
+        console.error(error);
+      }
     },
     formatNumberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

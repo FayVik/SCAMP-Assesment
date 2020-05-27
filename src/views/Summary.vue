@@ -54,7 +54,7 @@ export default {
       fields: [
         "Country",
         "NewConfirmed",
-        "NewConfirmed",
+        "TotalConfirmed",
         "NewDeaths",
         "TotalDeaths",
         "NewRecovered",
@@ -65,18 +65,19 @@ export default {
   },
   mounted() {
     this.getCountrySta();
+    setInterval(() => {
+      this.getCountrySta();
+    }, 30000);
   },
   methods: {
-    getCountrySta() {
-      setInterval(async () => {
-        try {
-          const response = await fetch("https://api.covid19api.com/summary");
-          const data = await response.json();
-          this.items = data.Countries;
-        } catch (error) {
-          console.error(error);
-        }
-      }, 30000);
+    async getCountrySta() {
+      try {
+        const response = await fetch("https://api.covid19api.com/summary");
+        const data = await response.json();
+        this.items = data.Countries;
+      } catch (error) {
+        console.error(error);
+      }
     }
   },
   computed: {
