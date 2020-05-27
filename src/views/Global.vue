@@ -31,9 +31,9 @@ export default {
   },
   mounted() {
     this.getGlobalSta();
-    setInterval(() => {
-      this.getGlobalSta();
-    }, 30000);
+    // setInterval(() => {
+    //   this.getGlobalSta();
+    // }, 30000);
   },
   methods: {
     async getGlobalSta() {

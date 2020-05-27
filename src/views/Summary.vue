@@ -65,9 +65,9 @@ export default {
   },
   mounted() {
     this.getCountrySta();
-    setInterval(() => {
-      this.getCountrySta();
-    }, 30000);
+    // setInterval(() => {
+    //   this.getCountrySta();
+    // }, 30000);
   },
   methods: {
     async getCountrySta() {
