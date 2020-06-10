@@ -1,13 +1,15 @@
 <template>
   <div class="container-fluid hero-page p-0 m-0">
-    <Navbar />
     <div class="hero-page-content">
       <div>
+        <Navbar />
+      </div>
+      <div class="mb-5">
         <h2 class="text-center pt-5 m-0 mb-4 mt-5">The Global Update</h2>
         <Global></Global>
       </div>
       <div>
-        <h2 class="text-center pt-3 m-0 mb-4 mt-2">Per Country Update</h2>
+        <h2 class="text-center pt-5 m-0 mb-2 mt-5">Per Country Update</h2>
         <Summary class="mb-5"></Summary>
       </div>
       <div class="mt-5">

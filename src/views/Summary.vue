@@ -2,15 +2,15 @@
   <div class="container mt-5">
     <div class="card pb-3">
       <div class="card-body">
-        <div class="overflow-auto summary">
-          <b-col lg="6" class="my-1">
+        <div class="col-12 summary">
+          <b-col class="m-auto col-lg-6 col-md-12 col-sm-12">
             <b-form-group
               label="Filter"
-              label-cols-sm="3"
-              label-align-sm="right"
+              label-cols-sm="2"
+              label-align-sm="left"
               label-size="sm"
               label-for="filterInput"
-              class="mb-0"
+              class="m-0"
             >
               <b-input-group size="sm">
                 <b-form-input
@@ -25,8 +25,9 @@
               </b-input-group>
             </b-form-group>
           </b-col>
-
+          <hr />
           <b-table
+            class="mt-3 table-responsive"
             :filter="filter"
             :items="items"
             :per-page="perPage"
@@ -96,13 +97,11 @@ export default {
   font-size: 18px;
   .summary {
     min-height: 40vh;
-    .b-table {
-      color: #efefef;
-      margin-top: 4%;
+    .table-responsive {
+      color: #fff !important;
     }
     .pagination {
       justify-content: center;
-      padding-left: 0;
     }
     hr {
       background-color: #ffffff;
@@ -110,4 +109,4 @@ export default {
     }
   }
 }
-</style>>
+</style>
